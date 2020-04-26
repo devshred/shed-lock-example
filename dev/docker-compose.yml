@@ -1,0 +1,27 @@
+version: '3.6'
+
+services:
+  db:
+    image: postgres:11.4
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+  app_1:
+    depends_on:
+      - "db"
+    image: devshred/lockapp:latest
+    environment:
+      - "SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/db"
+    ports:
+      - "7001:8080"
+  app_2:
+    depends_on:
+      - "db"
+    image: devshred/lockapp:latest
+    environment:
+      - "SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/db"
+    ports:
+      - "7002:8080"

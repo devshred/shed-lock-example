@@ -1,0 +1,32 @@
+app:
+  db:
+    host: 127.0.0.1
+    port: 5432
+    name: db
+    username: user
+    password: password
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${app.db.host}:${app.db.port}/${app.db.name}
+    username: ${app.db.username}
+    password: ${app.db.password}
+  flyway:
+    baselineOnMigrate: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    ROOT: INFO
+    org.devshred: DEBUG

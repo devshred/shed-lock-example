@@ -1,0 +1,49 @@
+*.log
+tmp
+*.retry
+.DS_Store
+*.pem
+
+### Gradle ###
+.gradle
+/build/
+/out/
+!gradle/wrapper/gradle-wrapper.jar
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+/src/main/resources/application-kevin.yml
+
+### VSCode ###
+.vscode
