@@ -36,11 +36,11 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.flywaydb:flyway-core:5.2.4")
-    implementation("org.postgresql:postgresql:42.2.6")
+    implementation("org.flywaydb:flyway-core:6.4.1")
+    implementation("org.postgresql:postgresql:42.2.12")
 
-    implementation("net.javacrumbs.shedlock:shedlock-spring:4.8.0")
-    implementation("net.javacrumbs.shedlock:shedlock-provider-jdbc-template:4.8.0")
+    implementation("net.javacrumbs.shedlock:shedlock-spring:4.9.1")
+    implementation("net.javacrumbs.shedlock:shedlock-provider-jdbc-template:4.9.1")
 //    implementation("ch.qos.logback:logback-classic:1.2.3")
 }
 
